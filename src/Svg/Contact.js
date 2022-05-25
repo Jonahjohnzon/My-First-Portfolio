@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div>
         
-<svg y="0px" viewBox="0 0 414.937 414.937" className='w-7 fill-neutral hover:fill-green dark:hover:fill-lightgreen ' >
+<svg y="0px" viewBox="0 0 414.937 414.937" className='w-7  hover:fill-green dark:hover:fill-lightgreen ' >
 <g>
 	<path d="M159.138,256.452c37.217,36.944,80.295,72.236,97.207,55.195c24.215-24.392,39.12-45.614,92.854-2.761
 		c53.734,42.874,12.696,71.727-10.757,95.363c-27.064,27.269-128.432,1.911-228.909-97.804C9.062,206.71-17.07,105.54,10.014,78.258

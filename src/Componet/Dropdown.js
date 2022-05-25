@@ -33,7 +33,7 @@ const Dropdown = ({set,drop,change,sett}) => {
       smooth={true}
       hashSpy={true}
       offset={50}
-      duration={500} onClick={()=>drop(!set)}>Contact</Link>
+      duration={2000} onClick={()=>drop(!set)}>Contact</Link>
           <div className='w-full'>
           <div className='tablet:h-14 h-10 w-full flex justify-center ' >
             <div className='w-full tablet:w-4/6 desktop:w-4/6 h-full border-2 border-neutral hover:border-green dark:hover:border-lightgreen rounded-full shadow-inner  shadow-black flex justify-end dark:justify-start relative item-center overflow-hidden' onClick={mode}>

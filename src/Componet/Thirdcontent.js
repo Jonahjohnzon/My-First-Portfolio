@@ -2,12 +2,15 @@ import React from 'react'
 
 const Thirdcontent = ({data}) => {
   return (
-    <div className='tablet:w-96 rounded-2xl overflow-hidden shadow-[0px_0px_10px_black] cursor-pointer hover:shadow-[0px_0px_2px_black] my-10'>
-    <a href={data.Link} ><div className=' h-[350px] w-full bg-cover' style={{backgroundImage:`url(${data.Image})`}}></div></a>
-    <div className=' bg-cream flex justify-around border-b-2 dark:border-dark border-cream py-3'><a href={data.ViewCode} className="  font-semibold"> ViewCode</a></div>
-    <div className='bg-dark dark:bg-cream flex justify-around border-b-2 dark:border-dark border-cream text-center font-semibold dark:text-dark text-cream'><div>{data.Tools}</div></div>
-    <div className=' dark:bg-cream dark:text-dark text-cream bg-dark text-center text-sm h-full py-5'><div className=' font-semibold'>{data.Title}</div>{data.About}<div className=' font-semibold'>Length: {data.TimeFrame}</div><div className=' font-semibold'>Responsive: {data.Responsive}</div></div>
-   
+    <div className='tablet:w-full h-full rounded-2xl my-10 laptop:my-10 tablet:flex'>
+    <a href={data.Link} className="w-full overflow-hidden tablet:p-5 h-60 tablet:h-96 flex justify-center" ><div className='  bg-contain bg-no-repeat w-60 tablet:w-96' style={{backgroundImage:`url(${data.Image})`}}></div></a>
+    <div className='w-full h-full flex items-center tablet:p-5 '>
+      <div className='h-3/6  border-2 border-black flex flex-col items-center bg-white rounded-xl overflow-hidden'>
+    <div className='w-full  flex justify-around border-b-2 border-black  text-center font-semibold text-black '><div>{data.Tools}</div></div>
+    <div className=' w-5/6  text-dark  text-center text-xs tablet:text-sm h-full py-5'><div className=' font-semibold'>{data.Title}</div>{data.About}<div className=' font-semibold'>Length: {data.TimeFrame}</div><div className=' font-semibold'>Responsive: {data.Responsive}</div></div>
+    <div className=' w-full flex justify-around border-b-2 border-black  py-3  text-black'><a href={data.ViewCode} className="  font-normal bg-black text-white py-3 rounded-md px-5"> ViewCode</a> <a href={data.Link} className="  font-normal bg-black text-white py-3 rounded-md px-5"> Preview</a></div>
+    </div>
+    </div>
     </div>
   )
 }

@@ -4,7 +4,7 @@ const Project = () => {
   return (
     <div>
         
-<svg  viewBox="0 0 925 925" className='w-7 fill-neutral hover:fill-green dark:hover:fill-lightgreen '>
+<svg  viewBox="0 0 925 925" className='w-7  hover:fill-green dark:hover:fill-lightgreen '>
 <g>
 	<g>
 		<path d="M352.9,53.4H441.6c33.601,0,61.601,24,68,55.7H560.2C553.4,49.7,502.8,3.4,441.6,3.4H352.9

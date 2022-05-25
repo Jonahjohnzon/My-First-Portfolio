@@ -14,10 +14,12 @@ module.exports = {
       backmovement6:'backmovement2 30s infinite',
       backmovement7:'backmovement3 30s infinite',
       backmovement8:'backmovement4 30s infinite',
+      spinnow:'spin 2s linear infinite'
     },
     colors:{
-      'dark':'rgb(33,33,33)',
-      'cold':'rgb(27,27,27)',
+      'dark':'#0f0f0f',
+      'cold':'#181818',
+      "other":"#181818",
       'white':'white',
       'lightgreen':'rgb(8,254,216)',
       'green':'rgb(2,153,126)',
@@ -40,6 +42,16 @@ module.exports = {
     extend: {
      
       keyframes:{
+      
+          spin: {
+            from:{
+              transform: 'rotate(0deg)'
+            },
+            to: {
+              transform:' rotate(360deg)'
+            }
+          }
+        ,
         backmovement:{
           '0%': {
             top:"10vh",

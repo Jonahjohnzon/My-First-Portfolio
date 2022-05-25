@@ -9,10 +9,41 @@ import Fb from '../../Svg/Fb'
 import Moon from '../../Svg/Moon'
 import Sun from '../../Svg/Sun'
 import Link from 'react-scroll/modules/components/Link'
+import { useState } from 'react'
+import { useEffect } from 'react'
 function Navbar({change,set}) {
   const mode =()=>{
   change(!set)
-  }  
+  } 
+  const [data,setdata]=useState()
+  const [home,sethome]=useState('#828282')
+  const [about,setabout]=useState('#828282')
+  const [proj,setproj]=useState('#828282')
+  const [con,setcon]=useState('#828282')
+  
+  window.addEventListener('scroll',()=>{setdata(window.scrollY)}) 
+  useEffect(()=>{
+   if(data<600){
+   sethome('rgb(8,254,216)')
+   }else{
+     sethome('#828282')
+   }
+   if(data>600 && data<1300){
+    setabout('rgb(8,254,216)')
+    }else{
+      setabout('#828282')
+    }
+    if(data>1300 && data<2900){
+      setproj('rgb(8,254,216)')
+      }else{
+        setproj('#828282')
+      }
+      if(data>2900){
+        setcon('rgb(8,254,216)')
+        }else{
+          setcon('#828282')
+        }
+  },[data])
   return (
     <div className='w-full h-full dark:bg-cold bg-dark shadow-[1px_1px_3px_black] flex flex-col items-center justify-between font-nunito  z-50'>
         <div className='flex flex-col items-center'>
@@ -31,22 +62,22 @@ function Navbar({change,set}) {
       smooth={true}
       hashSpy={true}
       offset={50}
-      duration={500} className=' cursor-pointer hover:fill-green dark:hover:fill-lightgreen  fill-neutral w-10'><Home/></Link>
+      duration={500} className=' cursor-pointer  w-10' style={{fill:home}}><Home/></Link>
                 <Link to='Second' spy={true}
       smooth={true}
       hashSpy={true}
       offset={50}
-      duration={500} className='hover:text-lightgreen cursor-pointer'><About/></Link>
+      duration={500} className='hover:text-lightgreen cursor-pointer fill-neutral'  style={{fill:about}}><About/></Link>
                 <Link to='Third' spy={true}
       smooth={true}
       hashSpy={true}
       offset={50}
-      duration={500} className='hover:text-lightgreen cursor-pointer'><Project/></Link>
+      duration={500} className=' fill-neutral cursor-pointer'  style={{fill:proj}}><Project/></Link>
                 <Link to='Contact'spy={true}
       smooth={true}
       hashSpy={true}
-      offset={50}
-      duration={500} className='hover:text-lightgreen cursor-pointer'><Contact/></Link>
+      offset={500}
+      duration={1000} className='hover:text-lightgreen cursor-pointer fill-neutral'  style={{fill:con}}><Contact/></Link>
             </ul>
         </div>
         <div className='text-lg font-extrabold text-center w-full h-1/6'>

@@ -3,8 +3,9 @@ import React from 'react'
 const Home = () => {
   return (
     <svg
+    
     viewBox="0 0 50 50"
-    className=' '>
+    className='hover:fill-green dark:hover:fill-lightgreen  '>
   <g  id="layer1">
     <path
         id="rect2879"
