@@ -82,8 +82,8 @@ const Box=()=>{
   gsap.to(ball.current.position,{
     x:1,
     duration:2,
-  },[])
   })
+  },[])
   return(
     <>
     <PerspectiveCamera makeDefault position={[0,1,5]} />
@@ -131,15 +131,17 @@ const Box=()=>{
           <div className='fixed z-50 w-fit'>
           {drop&&<Dropdown set={drop} drop={drop=>setdrop(drop)} change={change} sett={set}/>}
           </div>
+          <div className='fixed right-20 top-10 hidden laptop:flex'>
           <motion.div variants={slidin} initial="hiddens" animate="shows">
-          <Link  className='w-32 h-10 laptop:flex justify-center items-center text-dark bg-green dark:bg-lightgreen rounded-3xl dark:shadow-[1px_1px_3px_black] cursor-pointer hidden fit z-10 fixed right-20 top-10' onClick={Scroll}>Contact Me</Link>
+          <Link  className='w-32 h-10 laptop:flex justify-center items-center text-dark bg-green dark:bg-lightgreen rounded-3xl dark:shadow-[1px_1px_3px_black] cursor-pointer hidden fit z-10 ' onClick={Scroll}>Contact Me</Link>
           </motion.div>
+          </div>
         </div>
         </div>
         <div className='w-full h-5/6 laptop:flex items-center text-center  laptop:text-left ' >
-        <div className='w-full laptop:w-2/6 h-full flex items-center' >
+        <div className='w-full laptop:w-2/6 h-full flex items-center  z-50 laptop:relative' >
 
-          <motion.div variants={slide} initial="hidden" animate="show" className='w-full h-2/3 flex flex-col justify-around tablet:items-center laptop:items-start tablet:mt-80 laptop:mt-0 z-50 laptop:relative'>
+          <motion.div variants={slide} initial="hidden" animate="show" className='w-full h-2/3 flex flex-col justify-around tablet:items-center laptop:items-start tablet:mt-80 laptop:mt-0'>
           <div   className=' whitespace-nowrap flex items-center   text-lg ml-3'>HEY THERE<span className='mx-3'> <img src='/icon/hand.png' className="w-5"/></span> I'M</div>
           <motion.div variants={children}>
             <div className=' font-bold text-7xl tablet:text-8xl mb-6 w-full 2/6 shadow-[0px_0px_4px_black] bg-white dark:bg-other text-other dark:text-white'>
@@ -155,7 +157,7 @@ const Box=()=>{
      
         </div>
       </div>
-      <div className='w-full h-full  hidden laptop:flex justify-end absolute z-0'>
+      <div className='w-full h-full  hidden laptop:flex justify-end absolute'>
        <Canvas shadows>
          <OrbitControls ref={cameras} minPolarAngle={1.4} maxPolarAngle={1.5} enableZoom={false}/>
            <Box/>

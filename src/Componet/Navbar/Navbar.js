@@ -45,7 +45,7 @@ function Navbar({change,set}) {
         }
   },[data])
   return (
-    <div className='w-full h-full dark:bg-cold bg-dark shadow-[1px_1px_3px_black] flex flex-col items-center justify-between font-nunito  z-50'>
+    <div className='w-full h-full dark:bg-cold bg-dark shadow-[1px_1px_3px_black] flex flex-col items-center justify-between font-nunito '>
         <div className='flex flex-col items-center'>
         <img src='/menu/jlogo.webp' className='mb-5'/>
         <div className='h-7 w-5/6 flex justify-center' >

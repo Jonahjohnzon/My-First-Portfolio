@@ -46,7 +46,9 @@ function App() {
       <div className="w-full dark:bg-dark bg-white overflow-x-auto" >
     <div className="w-full h-full dark:bg-dark bg-white">
     <AnimatePresence>
-    <motion.div  variants={sliding} initial="hidden" animate="show" exit="exit" key={2} className="h-full w-1/12  left-0 top-0 z-50 hidden laptop:block fixed "><Navbar change={backColor=>setBackColor(backColor)} set={backColor}/></motion.div>
+      <div className=" z-50 fixed  hidden laptop:block h-full w-1/12">
+    <motion.div  variants={sliding} initial="hidden" animate="show" exit="exit" key={2} className="h-full w-full  left-0 top-0 z-50 hidden laptop:block  "><Navbar change={backColor=>setBackColor(backColor)} set={backColor}/></motion.div>
+    </div>
     </AnimatePresence>
     <FrontPage change={backColor=>setBackColor(backColor)} set={backColor} />
      <SecondPage/>
